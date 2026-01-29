@@ -3,46 +3,39 @@
 #include "CorePch.h"
 #include <thread>
 #include <atomic>
+#include <mutex>// lock용 해더
 
-//atomic : all-or-nothing operation 전부 작동하거나 아예 작동하지 않거나
-atomic<int32> sum = 0;
+vector<int32> v;
+//Mutual Exclusion : 상호 배타적
+mutex m;//일종의 자물쇠
 
-void Add() {
-	for (int32 i = 0; i < 1000000; i++) {
-		sum.fetch_add(1);//atomic클래스 함수-특정 변수의 값을 가져온 후에 해당 변수에 인자로 전달된 값을 더하고, 그 결과를 반환
-		/*
-		//sum++; //<--이게 실제로는 아래와 같이 동작
-		int32 eax = sum;
-		eax = eax + 1;
-		sum = eax;
-		두 쓰레드가 우선순위 없이 동시에 실행되어 값이 일관되지 않음
-		*/
-	}
-}
+//RAII 패턴 (Resource Acquisition Is Initialization)
 
-void Sub() {
-	for(int32 i=0;i<1000000; i++) {
-		sum.fetch_add(-1);
-		/*
-		//sum--;
-		int32 eax = sum;
-		eax = eax - 1;
-		sum = eax;
-		*/
+void Push(){
+	for (int32 i = 0; i < 10000; i++) {
+		m.lock();//자물쇠 잠금
+		//m.lock(); 일반 뮤텍스는 재귀적 불가 데드락발생
+		std::unique_lock<std::mutex> uniq_lock(m, std::defer_lock);// unique_lock : 만들자 마자 잠기지 않고 잠기는 시점을 정할 수 있음
+		v.push_back(i);
+
+		if (i == 5000) {
+			m.unlock();
+			break;
+		}
+
+		m.unlock();//자물쇠 해제
+		//m.unlock();
 	}
 }
 
 int main()
 {
-	Add();
-	Sub();
+	std::thread t1(Push);
+	std::thread t2(Push);
 
-	cout << "Final sum: " << sum << endl;
-
-	std::thread t1(Add);
-	std::thread t2(Sub);
 	t1.join();
 	t2.join();
-	cout << "Final sum after threads: " << sum << endl;
+
+	cout << v.size() << endl;
 	
 }

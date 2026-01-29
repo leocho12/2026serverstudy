@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\2026summerserverstudy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C9E2EADC-699B-4A90-BDD0-529215A9ADBC}|ServerCore\\ServerCore.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\ServerCore\\CorePch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C9E2EADC-699B-4A90-BDD0-529215A9ADBC}|ServerCore\\ServerCore.vcxproj|solutionrelative:ServerCore\\CorePch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,11 +36,15 @@
         },
         {
           "DockedWidth": 400,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "pch.cpp",
               "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp",
               "RelativeDocumentMoniker": "2026summerserverstudy\\pch.cpp",
@@ -48,11 +52,12 @@
               "RelativeToolTip": "2026summerserverstudy\\pch.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-27T08:48:10.354Z"
+              "WhenOpened": "2026-01-27T08:48:10.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CorePch.cpp",
               "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\ServerCore\\CorePch.cpp",
               "RelativeDocumentMoniker": "ServerCore\\CorePch.cpp",
@@ -60,7 +65,8 @@
               "RelativeToolTip": "ServerCore\\CorePch.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-27T08:25:48.045Z"
+              "WhenOpened": "2026-01-27T08:25:48.045Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -70,7 +76,7 @@
               "RelativeDocumentMoniker": "2026summerserverstudy\\2026summerserverstudy.cpp",
               "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp",
               "RelativeToolTip": "2026summerserverstudy\\2026summerserverstudy.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T08:14:01.23Z",
               "EditorCaption": ""
