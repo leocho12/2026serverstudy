@@ -1,19 +1,48 @@
 ﻿#include "pch.h"
 #include <iostream>
 #include "CorePch.h"
+#include <thread>
+#include <atomic>
+
+//atomic : all-or-nothing operation 전부 작동하거나 아예 작동하지 않거나
+atomic<int32> sum = 0;
+
+void Add() {
+	for (int32 i = 0; i < 1000000; i++) {
+		sum.fetch_add(1);//atomic클래스 함수-특정 변수의 값을 가져온 후에 해당 변수에 인자로 전달된 값을 더하고, 그 결과를 반환
+		/*
+		//sum++; //<--이게 실제로는 아래와 같이 동작
+		int32 eax = sum;
+		eax = eax + 1;
+		sum = eax;
+		두 쓰레드가 우선순위 없이 동시에 실행되어 값이 일관되지 않음
+		*/
+	}
+}
+
+void Sub() {
+	for(int32 i=0;i<1000000; i++) {
+		sum.fetch_add(-1);
+		/*
+		//sum--;
+		int32 eax = sum;
+		eax = eax - 1;
+		sum = eax;
+		*/
+	}
+}
 
 int main()
 {
-    HelloWorld();
+	Add();
+	Sub();
+
+	cout << "Final sum: " << sum << endl;
+
+	std::thread t1(Add);
+	std::thread t2(Sub);
+	t1.join();
+	t2.join();
+	cout << "Final sum after threads: " << sum << endl;
+	
 }
-
-// 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
-// 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
-
-// 시작을 위한 팁: 
-//   1. [솔루션 탐색기] 창을 사용하여 파일을 추가/관리합니다.
-//   2. [팀 탐색기] 창을 사용하여 소스 제어에 연결합니다.
-//   3. [출력] 창을 사용하여 빌드 출력 및 기타 메시지를 확인합니다.
-//   4. [오류 목록] 창을 사용하여 오류를 봅니다.
-//   5. [프로젝트] > [새 항목 추가]로 이동하여 새 코드 파일을 만들거나, [프로젝트] > [기존 항목 추가]로 이동하여 기존 코드 파일을 프로젝트에 추가합니다.
-//   6. 나중에 이 프로젝트를 다시 열려면 [파일] > [열기] > [프로젝트]로 이동하고 .sln 파일을 선택합니다.
