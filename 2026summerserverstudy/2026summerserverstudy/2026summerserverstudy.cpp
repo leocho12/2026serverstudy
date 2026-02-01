@@ -6,11 +6,7 @@
 #include <mutex>// lock용 해더
 
 
-//스핀 락
-// 락을 획득할 때 까지 계속 반복해서 시도
-// CPU 점유율이 높음
-// 컨텍스트 스위칭이 없음
-// 빠른 작업에 적합
+//Sleep
 
 class SpinLock {
 public:
@@ -19,21 +15,13 @@ public:
 
 		bool expected = false;
 		bool desired = true;
-		//CAS 의사코드
-		/*
-		if (_locked == expected) {
-			expected = _locked;
-			_locked = desired;
-			return true;
-		}
-		else {
-			expected = _locked;
-			return false;
-		}
-		*/
-		//이 코드를 아래와 같이 한번에 묶어서 사용할 수	있음
+		
 		while (_locked.compare_exchange_strong(expected, desired) == false) {
 			expected = false;
+
+			//this_thread::sleep_for(std::chrono::milliseconds(100));
+			//this_thread::sleep_for(0ms);//지정한 시간까지 스레드를 일시정지
+			this_thread::yield();//다른 스레드에게 실행 기회를 양보
 		}
 	}
 
