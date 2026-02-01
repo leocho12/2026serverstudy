@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\UserManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\2026summerserverstudy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\AccountManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\UserManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{78CD8E0E-79CD-4F6D-A1DC-59B3E9A0AF25}|2026summerserverstudy\\2026summerserverstudy.vcxproj|solutionrelative:2026summerserverstudy\\AccountManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9E2EADC-699B-4A90-BDD0-529215A9ADBC}|ServerCore\\ServerCore.vcxproj|C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\ServerCore\\CorePch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -36,23 +52,54 @@
         },
         {
           "DockedWidth": 400,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "pch.cpp",
-              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp",
-              "RelativeDocumentMoniker": "2026summerserverstudy\\pch.cpp",
-              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp",
-              "RelativeToolTip": "2026summerserverstudy\\pch.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-27T08:48:10.354Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AccountManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.cpp",
+              "RelativeDocumentMoniker": "2026summerserverstudy\\AccountManager.cpp",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.cpp",
+              "RelativeToolTip": "2026summerserverstudy\\AccountManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T06:29:12.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserManager.h",
+              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.h",
+              "RelativeDocumentMoniker": "2026summerserverstudy\\UserManager.h",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.h",
+              "RelativeToolTip": "2026summerserverstudy\\UserManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T06:29:29.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountManager.h",
+              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.h",
+              "RelativeDocumentMoniker": "2026summerserverstudy\\AccountManager.h",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\AccountManager.h",
+              "RelativeToolTip": "2026summerserverstudy\\AccountManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-01-30T06:29:07.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CorePch.cpp",
               "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\ServerCore\\CorePch.cpp",
               "RelativeDocumentMoniker": "ServerCore\\CorePch.cpp",
@@ -61,16 +108,48 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T08:25:48.045Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 400,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp",
+              "RelativeDocumentMoniker": "2026summerserverstudy\\pch.cpp",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\pch.cpp",
+              "RelativeToolTip": "2026summerserverstudy\\pch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-27T08:48:10.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.cpp",
+              "RelativeDocumentMoniker": "2026summerserverstudy\\UserManager.cpp",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\UserManager.cpp",
+              "RelativeToolTip": "2026summerserverstudy\\UserManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-01-30T06:29:32.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "2026summerserverstudy.cpp",
               "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp",
               "RelativeDocumentMoniker": "2026summerserverstudy\\2026summerserverstudy.cpp",
-              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp*",
-              "RelativeToolTip": "2026summerserverstudy\\2026summerserverstudy.cpp*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp",
+              "RelativeToolTip": "2026summerserverstudy\\2026summerserverstudy.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T08:14:01.23Z",
               "EditorCaption": ""
