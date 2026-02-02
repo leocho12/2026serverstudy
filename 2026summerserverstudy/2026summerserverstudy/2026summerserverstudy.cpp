@@ -8,30 +8,45 @@
 #include <chrono>
 
 
-//이벤트
+//컨디션 변수
 
 
 mutex m;
 queue<int32> q;
 HANDLE handle;
 
+condition_variable cv;
+// 참고) 컨디션 변수는 유저레벨 오브젝트
+
 void Producer() {
+
 	while (true) {
+	// 1. Lock을 잡고
 		unique_lock<mutex> lock(m);
+	// 2. 공유변수 값 수정
 		q.push(100);
 	}
-	::SetEvent(handle);
+	// 3. Lock 해제(자동)
 
-	this_thread::sleep_for(10000ms);
+	// 4. 컨디션 변수로 다른 쓰레드에 통지
+	cv.notify_one(); // wait중인 쓰레드 하나를 깨운다.
+
+	//this_thread::sleep_for(10000ms);
 }
 
 void Consumer() {
 	while (true) {
-		::WaitForSingleObject(handle, INFINITE);//signal,nonsignal 상태에 따라 더이상 내려가지 않고 대기
-		//::ResetEvent(handle); //수동리셋이라면 여기서 리셋
-
+		
+		// 1. Lock을 잡고
 		unique_lock<mutex> lock(m);
-		if (q.empty() == false) {
+
+		// 2. 조건확인
+		cv.wait(lock, [](){return q.empty() == false;});
+		// -만족X -> Lock 해제 + 대기
+
+		// -만족O -> Lock 유지 + 진행
+		//while (q.empty() == false) 컨디션 변수 안에 루프가 포함되어 있음
+		{
 			int32 data = q.front();
 			q.pop();
 			cout << data << endl;
