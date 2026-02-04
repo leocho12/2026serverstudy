@@ -48,9 +48,9 @@
               "Title": "2026summerserverstudy.cpp",
               "DocumentMoniker": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp",
               "RelativeDocumentMoniker": "2026summerserverstudy\\2026summerserverstudy.cpp",
-              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp",
-              "RelativeToolTip": "2026summerserverstudy\\2026summerserverstudy.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Leo Cho\\Documents\\GitHub\\ServerStudy\\2026serverstudy\\2026summerserverstudy\\2026summerserverstudy\\2026summerserverstudy.cpp*",
+              "RelativeToolTip": "2026summerserverstudy\\2026summerserverstudy.cpp*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAEEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-27T08:14:01.23Z",
               "EditorCaption": ""
@@ -65,7 +65,8 @@
               "RelativeToolTip": "2026summerserverstudy\\pch.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-01-27T08:48:10.354Z"
+              "WhenOpened": "2026-01-27T08:48:10.354Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
