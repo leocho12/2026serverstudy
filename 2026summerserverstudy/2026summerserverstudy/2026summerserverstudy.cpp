@@ -3,102 +3,87 @@
 #include "CorePch.h"
 #include <thread>
 #include <atomic>
-#include <mutex>// lock용 해더
+#include <mutex>
+#include <windows.h>
 #include <future>
 
-//Future
+//메모리 모델(메모리 정책)
+// 어떤 식으로 메모리를 접근하고 동기화 할건가?
+// 1.sequentially consistent (seq_cst)
+// -가장 엄격 = 컴파일러 최적화 여지 적음 = 직관적
+// -가시성 문제, 코드 재배치 문제 없음
+// 2.acquire-release
+// -중간 정도 엄격
+// -release 명령 이전의 메모리 병령들이 해당 명령 이후 재배치 되는것을 금지
+// -acquire로 같은 변수를 읽는 쓰레드가 있다면
+// -release 이전의 명령들이 -> acquire 하는 순간에 관찰 가능	
+// 3.relaxed
+// -가장 느슨 = 컴파일러 최적화 여지 큼 = 직관적이지 않음	
+// -가시성 문제, 코드 재배치 문제 발생 가능
+// -가장 기본 조건(동일 객체에 대한 동일 관전 순서만 보장)
 
-int64 result;
-
-int64 Calculate() {
-	int64 sum = 0;
-
-	for (int32 i = 0; i < 100000; i++) {
-		sum += i;
-	}
-	result = sum;
-
-	return sum;
-}
-
-void PromiseWorker(std::promise<string>&& promise) {
-	promise.set_value("secret message");
-}
-
-void TaskWorker(std::packaged_task<int64(void)>&& task) {
-	task();
-}
+/*
+atomic<bool> flag;
 
 int main()
 {
-	// 동기(synchronous)실행 : 호출하는 순간 실행
-	//int64 sum =Calculate();
-	//cout << sum << endl;
+	flag = false;
 
+	//flag = true;
+	flag.store(true, memory_order::memory_order_seq_cst);
 
-	// std::future
+	//bool val = flag;
+	bool val = flag.load(memory_order::memory_order_seq_cst);
+
+	//이전 값을 prev에 넣고 flag값을 수정
 	{
-		// 언젠가 완료될 작업의 결과물을 약속하는 객체
-		// 비동기(asynchronous)실행 : 호출하는 순간 바로 리턴
-		// 1) deferred(지연) : 호출하는 순간 실행하지 않고, get()호출하는 순간 실행
-		// 2) async(비동기) : 호출하는 순간 별도의 스레드에서 실행
-		// 3) deffered | async : 호출하는 순간 상황에 따라 실행
-		std::future<int64> future = std::async(std::launch::async, Calculate);
+		//대입에 두단계를 거치지 않고 atomic한 연산으로 한번에 처리
+		bool prev = flag.exchange(true);
+	}
 
-		// 작업수행
+	// CAS (Compare And Swap) 조건부 수정
+	{
+		bool expected = false;
+		bool desired = true;
 
-		int64 sum = future.get(); // 결과물이 이제 필요하다!
+		flag.compare_exchange_strong(expected, desired);
+		//expected : flag의 이전값
+		//desired : flag에 새로 넣을 값
 
-		// 멤버변수를 호출하는 경우
-		{
-			class Knight {
-			public:
-				int64 GetHp() { return 100; }
-			};
-			Knight knight;
-			std::future<int64> future2 = std::async(std::launch::async, &Knight::GetHp, knight);
+		if (flag == expected) {
+			//다른 쓰레드의 방해를 받아 중간에 실패할 수 있음
+			//if (fail)
+				//return false;
+
+			//expected==flag
+			flag = desired;
+			return true;
 		}
+		else {
+			expected = flag;
+			return false;
+		}
+		
+		while (true) {
+			bool expected = false;
+			bool desired = true;
+			flag.compare_exchange_weak(expected, desired);
+		}
+
+		// compare_exchange_strong과 compare_exchange_weak의 차이
+		// strong
+		// -값이 같으면 반드시 성공
+		// -가짜 실패(spurious failure)없음
+		// -실패할 경우 성공할때 까지 알아서 반복
+		// -weak보다 무거움
+
+		// weak
+		// -값이 같아도 가짜 실패(spurious failure) 때문에 실패할 수 있음
+		// -무조건 while문과 함께 사용
+
 	}
 
-
-	// std::promise
-	{
-		// 미래(std::future)에 결과물을 반환할거라고 약속
-		// promise로 값을 설정하고, future로 값을 얻어옴
-		std::promise<string> promise;
-		std::future<string> future = promise.get_future();
-
-		thread t(PromiseWorker, std::move(promise));
-
-		string message = future.get();
-		cout << message << endl;
-
-		t.join();
-	}
-
-
-	// std::packaged_task
-	{
-		// packaged_task로 값을 설정하고, future로 값을 얻어옴
-		std::packaged_task<int64(void)> task(Calculate);
-		// 결과물 자체를 future객체를 통해 받아올 수 있음
-		std::future<int64> future = task.get_future();
-
-		std::thread t(TaskWorker, std::move(task));
-
-		int64 sum = future.get();
-		cout << sum << endl;
-		t.join();
-	}
-
-
-	// 요약)
-	// mutex, condition_variable까지 사용하지 않고 단순한 작업ㅇ르 처리할수있는 방법들이다
-	// 일회성으로 한번만 일어나는 이밴트에 대해 효과적
-	// 1. future-async
-	// 원하는 함수를 비동기적으로 실행
-	// 2. promise
-	// promise객체로 값을 설정하고, future객체로 값을 얻어옴
-	// 3. packaged_task
-	// 특정 작업을 나중에 실행하고, future객체로 값을 얻어옴
 }
+*/
+
+
