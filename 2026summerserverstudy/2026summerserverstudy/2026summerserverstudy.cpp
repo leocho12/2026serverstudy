@@ -7,31 +7,35 @@
 #include <windows.h>
 #include <future>
 #include <chrono>
+#include "ConcurrentQueue.h"
+#include "ConcurrentStack.h"
 
-//TLS
-// 각 스레드마다 가지는 고유한 저장공간
-// 힙에서 자기가 사용할 데이터를 충분히 꺼내 TLS에 저장하고 거기서 꺼내 사용
-// 데이터에 접근하기 위해 경합하는 시간을 줄인다
-// 스책은 기본적으로 함수를 위한 공간이고 데이터를 저장해 놓기에는 불안정하다
+//Lock based Queue and Stack test
 
-thread_local int32 LThreadid = 0;
+LockQueue<int32> q;
+LockStack<int32> s;
 
-void ThreadMain(int32 threadid) {
-	LThreadid = threadid;
+void Push() {
 	while (true) {
-		cout << "thread id : " << LThreadid << endl;
-		this_thread::sleep_for(1s);
+		int32 value = rand() % 100;
+		q.Push(value);
+		this_thread::sleep_for(10ms);
+	}
+}
+
+void Pop() {
+	while (true) {
+		int32 data = 0;
+		if (q.TryPop(OUT data))
+			cout << data << endl;
+		
 	}
 }
 
 int main() {
+	thread t1(Push);
+	thread t2(Pop);
+	t1.join();
+	t2.join();
 
-	vector<thread> threads;
-
-	for (int32 i = 0; i < 10; i++) {
-		int32 threadid = i + 1;
-		threads.push_back(thread(ThreadMain, threadid));
-	}
-	for (thread& t : threads)
-		t.join();
 }
