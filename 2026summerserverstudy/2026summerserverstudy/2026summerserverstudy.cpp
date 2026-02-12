@@ -10,7 +10,7 @@
 #include "ConcurrentQueue.h"
 #include "ConcurrentStack.h"
 
-//Lock based Queue and Stack test
+//Lock free Stack
 
 LockQueue<int32> q;
 LockStack<int32> s;
@@ -18,7 +18,7 @@ LockStack<int32> s;
 void Push() {
 	while (true) {
 		int32 value = rand() % 100;
-		q.Push(value);
+		s.Push(value);
 		this_thread::sleep_for(10ms);
 	}
 }
@@ -26,7 +26,7 @@ void Push() {
 void Pop() {
 	while (true) {
 		int32 data = 0;
-		if (q.TryPop(OUT data))
+		if (s.TryPop(OUT data))
 			cout << data << endl;
 		
 	}
@@ -35,7 +35,9 @@ void Pop() {
 int main() {
 	thread t1(Push);
 	thread t2(Pop);
+	thread t3(Pop);
 	t1.join();
 	t2.join();
+	t3.join();
 
 }
