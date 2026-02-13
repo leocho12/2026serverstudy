@@ -1,4 +1,28 @@
 ﻿  2026summerserverstudy.cpp
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(28,17): error C2660: 'LockStack<int32>::TryPop': 함수는 0개의 인수를 사용하지 않습니다.
+  (소스 파일 '/2026summerserverstudy.cpp'을(를) 컴파일하는 중)
+      C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\ConcurrentStack.h(21,7):
+      'LockStack<int32>::TryPop' 선언을 참조하십시오.
+      C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(28,17):
+      인수 목록 '()'을(를) 일치시키는 동안
+  
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(29,12): error C2446: '!=': 'nullptr'에서 'int'(으)로 변환되지 않았습니다.
+  (소스 파일 '/2026summerserverstudy.cpp'을(를) 컴파일하는 중)
+      C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(29,15):
+      네이티브 nullptr은 bool로만 변환할 수 있지만 reinterpret_cast를 사용하면 정수 계열 형식으로 변환할 수 있습니다.
+  
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,13): error C2100: '_T' 형식의 피연산자를 역참조할 수 없습니다.
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,13): error C2100:         with
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,13): error C2100:         [
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,13): error C2100:             _T=bool
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,13): error C2100:         ]
+  (소스 파일 '/2026summerserverstudy.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,14): warning C4804: '<<': 연산에 'bool' 형식을 사용하는 것은 안전하지 않습니다.
+  (소스 파일 '/2026summerserverstudy.cpp'을(를) 컴파일하는 중)
+  
+C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\2026summerserverstudy\2026summerserverstudy.cpp(30,9): error C2088: 기본 제공 연산자 '<<'은(는) 'std::ostream' 형식의 피연산자에 적용될 수 없습니다.
+  (소스 파일 '/2026summerserverstudy.cpp'을(를) 컴파일하는 중)
+  
   ConcurrentStack.cpp
   코드를 생성하고 있습니다...
-  2026summerserverstudy.vcxproj -> C:\Users\Leo Cho\Documents\GitHub\ServerStudy\2026serverstudy\2026summerserverstudy\Binary\Debug\2026summerserverstudy.exe
