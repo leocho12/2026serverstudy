@@ -2,7 +2,3 @@
 #include "CorePch.h"
 
 
-void HelloWorld()
-{
-	cout << "Hello Server!" << endl;
-}

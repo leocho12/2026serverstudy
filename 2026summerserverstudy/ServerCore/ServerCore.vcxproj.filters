@@ -7,6 +7,9 @@
     <Filter Include="Utils">
       <UniqueIdentifier>{2366512f-f1aa-4527-bc12-2fa1b4466483}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{15dc9b77-be8a-40a3-b935-836651a41871}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -18,6 +21,14 @@
     <ClInclude Include="Types.h">
       <Filter>Utils</Filter>
     </ClInclude>
+    <ClInclude Include="CoreGlobal.h" />
+    <ClInclude Include="CoreTLS.h" />
+    <ClInclude Include="CoreMacro.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadManager.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -25,6 +36,11 @@
     </ClCompile>
     <ClCompile Include="CorePch.cpp">
       <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreGlobal.cpp" />
+    <ClCompile Include="CoreTLS.cpp" />
+    <ClCompile Include="ThreadManager.cpp">
+      <Filter>Thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

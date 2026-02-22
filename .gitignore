@@ -1,36 +1,3 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
 # Visual Studio
 .vs/
 *.ipch
@@ -39,14 +6,11 @@
 *.user
 *.userosscache
 *.sln.docstates
-x64/
-Debug/
-Release/
 *.vcxproj.user
 
 # Build results
-[Dd]ebug/
-[Rr]elease/
+Debug/
+Release/
 x64/
 x86/
 [Bb]in/
@@ -62,9 +26,12 @@ ipch/
 *.cachefile
 *.VC.db
 *.VC.VC.opendb
+*.idb
+*.ilk
 
 # IntelliSense
 *.ipch
-*.idb
-*.ilk.vs/
-*.ipch
+
+# Copilot
+CopilotIndices/
+FileContentIndex/

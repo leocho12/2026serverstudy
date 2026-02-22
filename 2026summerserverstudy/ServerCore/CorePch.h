@@ -1,6 +1,10 @@
 #pragma once
 
+#include "CoreGlobal.h"
 #include "Types.h"
+#include "CoreMacro.h"
+#include "CoreTLS.h"
+
 #include <vector>
 #include <list>
 #include <queue>
@@ -13,4 +17,3 @@
 #include <iostream>
 using namespace std;
 
-void HelloWorld();
